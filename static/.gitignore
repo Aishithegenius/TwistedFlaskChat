@@ -1,6 +1,0 @@
-venv/
-chat_web.log
-__pycache__/
-*.log
-*.pyc
-.DS_Store
