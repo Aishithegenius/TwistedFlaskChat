@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Chat</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="chat-container">
+      <h1>Live Chat</h1>
+
+      <!-- Username Input -->
+      <div id="username-container">
+        <input
+          type="text"
+          id="username-input"
+          placeholder="Enter your name..."
+        />
+        <button onclick="setUsername()">Join Chat</button>
+      </div>
+
+      <!-- Chat Box -->
+      <div id="chat-box" class="hidden">
+        <div class="messages" id="messages"></div>
+        <form id="message-form">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Type your message..."
+            autocomplete="off"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>
